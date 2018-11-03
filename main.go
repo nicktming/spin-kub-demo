@@ -20,6 +20,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	fmt.Printf("Couldn't read index.html\n");
 	http.HandleFunc("/", index)
 	http.ListenAndServe(":8000", nil)
 }
